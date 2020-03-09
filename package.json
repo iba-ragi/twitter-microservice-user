@@ -9,6 +9,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.3",
+    "nodemon": "^2.0.2",
     "prettier": "^1.19.1"
   },
   "name": "twitter-microservice",
@@ -18,7 +19,7 @@
   "author": "イバラギ <ibaragi.create@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
+    "dev": "NODE_ENV=development nodemon ./app.js",
     "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "husky": {
