@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "ava": "^3.5.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": "^14.1.0",
@@ -9,8 +10,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.3",
+    "mongodb-memory-server": "^6.3.2",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "supertest": "^3.4.2"
   },
   "name": "twitter-microservice",
   "version": "1.0.0",
@@ -20,7 +23,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./app.js",
-    "lint": "eslint --ext .js --ignore-path .gitignore ."
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "test": "ava",
+    "test-w": "ava --watch"
   },
   "husky": {
     "hooks": {
